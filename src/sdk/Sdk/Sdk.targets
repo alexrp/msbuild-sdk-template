@@ -1,0 +1,17 @@
+<Project>
+    <Import Project="Sdk.targets"
+            Sdk="Microsoft.NET.Sdk" />
+
+    <PropertyGroup Condition="'$(FooTasksPath)' == ''">
+        <FooTasksPath Condition="'$(MSBuildRuntimeType)' == 'Core'">$(MSBuildThisFileDirectory)../tools/net6.0/Foo.Tasks.dll</FooTasksPath>
+        <FooTasksPath Condition="'$(MSBuildRuntimeType)' != 'Core'">$(MSBuildThisFileDirectory)../tools/net472/Foo.Tasks.dll</FooTasksPath>
+    </PropertyGroup>
+
+    <UsingTask TaskName="Foo"
+               AssemblyFile="$(FooTasksPath)" />
+
+    <Target Name="Foo"
+            AfterTargets="Build">
+        <Foo />
+    </Target>
+</Project>

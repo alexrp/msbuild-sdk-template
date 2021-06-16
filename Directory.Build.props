@@ -1,0 +1,26 @@
+<Project>
+    <PropertyGroup>
+        <Product>MSBuild SDK Template</Product>
+        <Authors>Alex Rønne Petersen</Authors>
+        <Description>A template repository for sanely building a custom MSBuild SDK in .NET 6+.</Description>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <ContinuousIntegrationBuild Condition="'$(CI)' == 'true'">true</ContinuousIntegrationBuild>
+        <Copyright>Copyright © $(Authors)</Copyright>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>embedded</DebugType>
+        <EmbedAllSources>true</EmbedAllSources>
+        <IsPackable>false</IsPackable>
+        <IsPublishable>false</IsPublishable>
+        <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+        <PackageLicenseExpression>ISC</PackageLicenseExpression>
+        <PackageOutputPath>$(MSBuildThisFileDirectory)pkg/feed/</PackageOutputPath>
+        <PackageRestorePath>$(MSBuildThisFileDirectory)pkg/cache/</PackageRestorePath>
+        <PackageProjectUrl>https://github.com/alexrp/msbuild-sdk-template</PackageProjectUrl>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <RepositoryUrl>https://github.com/alexrp/msbuild-sdk-template.git</RepositoryUrl>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    </PropertyGroup>
+</Project>

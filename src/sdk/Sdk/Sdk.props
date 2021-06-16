@@ -1,0 +1,8 @@
+<Project>
+    <Import Project="Sdk.props"
+            Sdk="Microsoft.NET.Sdk" />
+
+    <PropertyGroup>
+        <UsingFooSdk>true</UsingFooSdk>
+    </PropertyGroup>
+</Project>

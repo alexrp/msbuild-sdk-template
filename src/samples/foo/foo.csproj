@@ -1,0 +1,7 @@
+<Project Sdk="Foo.Sdk">
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <RootNamespace>Foo</RootNamespace>
+        <TargetFramework>net6.0</TargetFramework>
+    </PropertyGroup>
+</Project>
